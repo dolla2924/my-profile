@@ -19,6 +19,8 @@ body {
     height: 80%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
+    box-shadow: 10px 10px 5px #ffffff55;
+    overflow: hidden;
 }
 
 body::after {
@@ -38,6 +40,7 @@ nav {
     margin: auto;
     padding: 10px;
     width: 80%;
+    text-align: center;
 }
 
 .logo {
@@ -56,13 +59,14 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 15px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    
 }
 
 nav ul li a:hover {
-    color: #ff000055;
+    color: #ff0000;
 }
 
 .content {
@@ -84,7 +88,7 @@ nav ul li a:hover {
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: px;
+    letter-spacing: 1px;
     margin-bottom: 20px;
 }
 
@@ -111,26 +115,35 @@ nav ul li a:hover {
 }
 
 @media (max-width:950px) {
-    .content,
-    nav {
+    .content, nav {
         flex-direction: column;
         justify-content: center;
         }
 
     .content .images,
     .content .text {
-        width: 80%;
+        width: 100%;
+
+
     }
 
     body::after {
-        clip-path: circle(40% at bottom);
+        clip-path: circle(35% at bottom);
     }
     .content .images img {
-        width: 270px;
+        width: 250px;
     }
     nav ul li a{
         font-size: 16px;
         font-weight: 7000;
     }
+    nav ul li {
+    display: inline-block;
+    margin: 5px;
+}
+.content{
+                overflow: hidden;
+
+}
 
 }
